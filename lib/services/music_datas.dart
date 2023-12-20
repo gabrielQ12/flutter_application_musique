@@ -1,7 +1,9 @@
-import 'package:learn_music/model/enums/genre.dart';
-import 'package:learn_music/model/enums/media_type.dart';
-import 'package:learn_music/model/raw_model/artist.dart';
-import 'package:learn_music/model/raw_model/song.dart';
+
+
+import '../model/enums/genre.dart';
+import '../model/enums/media_type.dart';
+import '../model/raw_model/artist.dart';
+import '../model/raw_model/song.dart';
 
 class MusicDatas {
 

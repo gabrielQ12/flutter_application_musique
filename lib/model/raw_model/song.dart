@@ -1,11 +1,12 @@
 
-import '../../raw_model/artist.dart';
+
 import '../enums/genre.dart';
 import '../enums/media_type.dart';
+import 'artist.dart';
 
 class Song {
   int id;
-  String title
+  String title;
   String album;
   String path;
   String thumb;
