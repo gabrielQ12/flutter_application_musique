@@ -1,26 +1,24 @@
-
 import 'package:flutter/material.dart';
+import 'package:learn_music/model/raw_model/bar_choice.dart';
+import 'package:learn_music/views/music_view.dart';
 
 import '../model/raw_model/bar_choice.dart';
-import '../views/music_view.dart';
 
 class Home extends StatefulWidget {
   @override
-  HomeState createState() =>  HomeState();
+  HomeState createState() => HomeState();
 }
 
 class HomeState extends State<Home> {
-
   int currentIndex = 0;
-  List<BarChoice> items= [
-      BarChoice(label: 'Musique', iconData:Icons.music_note, page:MusicView()),
-      BarChoice(label: 'Favoris', iconData:Icons.whatshot, page: Container()),
-      BarChoice(label: 'Recherche', iconData:Icons.search, page: Container())
+  List<BarChoice> items = [
+    BarChoice(label: "Musique", iconData: Icons.music_note, page: MusicView()),
+    BarChoice(label: "Favoris", iconData: Icons.whatshot, page: Container()),
+    BarChoice(label: "Recherche", iconData: Icons.search, page: Container()),
   ];
 
-
   @override
-  Widget  build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100),
@@ -37,7 +35,7 @@ class HomeState extends State<Home> {
                     Spacer(),
                     Icon(Icons.radio),
                     Icon(Icons.doorbell),
-                    Icon(Icons.settings),
+                    Icon(Icons.settings)
                   ],
                 ),
                 items[currentIndex].titleForAppBar
@@ -48,9 +46,9 @@ class HomeState extends State<Home> {
       ),
       body: items[currentIndex].page,
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex ,
+        currentIndex: currentIndex,
         items: items.map((i) => i.item).toList(),
-        onTap:barTapped,
+        onTap: barTapped,
       ),
     );
   }
@@ -60,7 +58,4 @@ class HomeState extends State<Home> {
       currentIndex = index;
     });
   }
-
-
-
 }

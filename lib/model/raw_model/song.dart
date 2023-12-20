@@ -1,4 +1,6 @@
-
+import 'package:learn_music/model/raw_model/artist.dart';
+import 'package:learn_music/model/enums/genre.dart';
+import 'package:learn_music/model/enums/media_type.dart';
 
 import '../enums/genre.dart';
 import '../enums/media_type.dart';
@@ -23,6 +25,6 @@ class Song {
     required this.artist,
     required this.genre,
     required this.mediaType
-});
-
+  });
 }
+

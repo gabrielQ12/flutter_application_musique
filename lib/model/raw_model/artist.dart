@@ -1,5 +1,4 @@
-
-class Artist {
+class Artist  {
   String name;
   String urlImage;
 

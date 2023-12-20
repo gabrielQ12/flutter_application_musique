@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_music/controller/home.dart';
 
 import 'controller/home.dart';
 
@@ -8,33 +10,20 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.light(),
+      theme: ThemeData.light().copyWith(
+        appBarTheme: AppBarTheme(
+          titleTextStyle: GoogleFonts.signika(color: Colors.black, fontSize: 18),
+          iconTheme: const IconThemeData(color: Colors.black)
+        )
+      ),
       darkTheme: ThemeData.dark(),
       home: Home(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: const Center(
-        child: Text('Hello, Flutter!'),
-      ),
-    );
-  }
-}

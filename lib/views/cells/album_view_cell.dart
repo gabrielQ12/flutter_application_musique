@@ -1,22 +1,33 @@
-
 import 'package:flutter/material.dart';
+import 'package:learn_music/controller/playlist_controller.dart';
+import 'package:learn_music/model/enums/playlist.dart';
+import 'package:learn_music/model/raw_model/album.dart';
 
+import '../../controller/playlist_controller.dart';
+import '../../model/enums/playlist.dart';
 import '../../model/raw_model/album.dart';
 
 class AlbumViewCell extends StatelessWidget {
   final Album album;
-  const AlbumViewCell({ required this.album});
+  const AlbumViewCell({required this.album});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return PlayListController(
+              title: album.title,
+              playlist: album.songs,
+              type: Playlist.album
+          );
+        }));
       },
-      child: ClipRRect(
+      child:
+      ClipRRect(
         borderRadius: BorderRadius.circular(8),
-        child: Image.network(album.songs[0].thumb, fit: BoxFit.fill),
-      ) ,
+        child: Image.network(album.songs[0].thumb, fit: BoxFit.cover),
+      )
     );
   }
 }

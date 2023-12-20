@@ -1,5 +1,4 @@
-
 enum MediaType {
   internet,
-  inApp,
+  inApp
 }
