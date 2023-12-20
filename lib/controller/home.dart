@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../model/bar_choice.dart';
+import '../model/raw_model/bar_choice.dart';
 
 class Home extends StatefulWidget {
   @override
