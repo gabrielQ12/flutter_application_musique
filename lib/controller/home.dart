@@ -39,7 +39,7 @@ class HomeState extends State<Home> {
                     Icon(Icons.settings),
                   ],
                 ),
-                Text("Mon app de Musique")
+                items[currentIndex].titleForAppBar
               ],
             ),
           ),
