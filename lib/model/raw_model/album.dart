@@ -1,6 +1,8 @@
 
 import 'package:flutter_application_musique/model/raw_model/song.dart';
-import '../../raw_model/artist.dart';
+
+import 'artist.dart';
+
 
 class Album {
   String title;
